@@ -74,55 +74,29 @@ The application uses property characteristics to generate predictions using a tr
 
 
 
-\## 🤖 Final Model
-
-
+## 🤖 Final Model
 
 The selected model is a tuned XGBoost regressor trained using a log-transformed target.
 
+| Parameter | Value |
+|---|---:|
+| Number of estimators | 300 |
+| Maximum depth | 5 |
+| Learning rate | 0.1 |
+| Subsample | 1.0 |
+| Column subsampling | 0.8 |
 
-
-Selected hyperparameters:
-
-
-
-| Parameter            | Value |
-
-| -------------------- | ----: |
-
-| Number of estimators |   300 |
-
-| Maximum depth        |     5 |
-
-| Learning rate        |   0.1 |
-
-| Subsample            |   1.0 |
-
-| Column subsampling   |   0.8 |
-
-
-
-\## 📊 Model Performance
-
-
+## 📊 Model Performance
 
 Results on the held-out test set:
 
+| Metric | Result |
+|---|---:|
+| R² | 0.9111 |
+| MAE | 61,215.65 |
+| RMSE | 111,903.04 |
 
-
-| Metric |     Result |
-
-| ------ | ---------: |
-
-| R²     |     0.9111 |
-
-| MAE    |  61,215.65 |
-
-| RMSE   | 111,903.04 |
-
-
-
-These metrics are expressed in the units of the dataset's `Price` column. They describe performance on the dataset's test split and do not establish accuracy for real-world property valuations.
+These metrics are expressed in the units of the dataset's `Price` column. They describe performance on the test split and do not establish accuracy for real-world property valuations.
 
 
 
